@@ -8,6 +8,8 @@ export const MyPosts = (props: any) => {
         {id: 1, message: "How are you?", likeCount:12},
         {id: 2, message: "First post", likeCount: 21},
     ];
+    let postsElements = postData.map(el=>
+        <Post message={el.message} likeCounts={el.likeCount}/>)
 
     return (
         <div className={s.postsBlock}>
@@ -28,9 +30,7 @@ export const MyPosts = (props: any) => {
                 New post
             </div>
             <div className={s.posts}>
-                <Post message={postData[0].message} likeCounts={postData[0].likeCount}/>
-                <Post message={postData[1].message} likeCounts={postData[1].likeCount}/>
-
+                {postsElements}
             </div>
         </div>
     )
