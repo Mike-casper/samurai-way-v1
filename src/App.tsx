@@ -7,18 +7,26 @@ import {Dialogs} from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-function App() {
+type MainPropsType= {
+    postData:Array<MyPostsType>
+}
+
+type MyPostsType ={
+    id: number,
+    message: string,
+    likeCount:number
+}
+
+function App(props:MainPropsType) {
+
     return (
         <BrowserRouter>
         <div className="wrapper">
             <Header/>
             <Navbar/>
             <div className="app-wrapper-content">
-                {/*<Route exact path="/dialogs" component={Dialogs}/>*/}
-                {/*<Route path="/profile" component={Profile}/>*/}
-
-                <Route exact path="/dialogs" component={()=><Dialogs/>}/>
-                <Route path="/profile" render={()=><Profile/>}/>
+                <Route exact path="/dialogs" component={Dialogs}/>
+                <Route path="/profile" render={()=><Profile postData={props.postData}/>}/>
             </div>
         </div>
         </BrowserRouter>);
