@@ -6,9 +6,19 @@ import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 
-
 type MainPropsType= {
+    dialogs:Array<DialogsType>
+    messagesData:Array<MessageDataType>
     postData:Array<MyPostsType>
+}
+type MessageDataType={
+    id?:number,
+    message:string
+}
+
+type DialogsType ={
+    id: number,
+    name:string
 }
 
 type MyPostsType ={
@@ -25,7 +35,7 @@ function App(props:MainPropsType) {
             <Header/>
             <Navbar/>
             <div className="app-wrapper-content">
-                <Route exact path="/dialogs" component={Dialogs}/>
+                <Route exact path="/dialogs" render={()=><Dialogs dialogs={props.dialogs} messagesData={props.messagesData}/>}/>
                 <Route path="/profile" render={()=><Profile postData={props.postData}/>}/>
             </div>
         </div>
