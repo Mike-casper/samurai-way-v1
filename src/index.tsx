@@ -9,6 +9,7 @@ let postData = [
     {id: 3, message: "SSSS?", likeCount:12},
     {id: 4, message: "Firth sss", likeCount: 121}
 ];
+
 let dialogs = [
     {id: 1, name: "Dimych"},
     {id: 2, name: "Andrew"},
@@ -27,7 +28,6 @@ let messagesData = [
     {id: 6, message: "Viktor"},
 ];
 ReactDOM.render(
-
     <App postData={postData} dialogs={dialogs} messagesData={messagesData} />,
   document.getElementById('root')
 );
