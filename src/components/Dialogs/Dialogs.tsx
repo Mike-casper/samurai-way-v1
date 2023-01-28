@@ -2,7 +2,10 @@ import React from "react";
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 
-type MainPropsType= {
+type MainPropsType = {
+    state:DialogsPropsType
+}
+type DialogsPropsType= {
     dialogs:Array<DialogsType>
     messagesData:Array<MessageDataType>
 }
@@ -32,10 +35,10 @@ export const Message = (props: MessageDataType) => {
 
 export const Dialogs = (props:MainPropsType) => {
 
-    let messagesElements = props.messagesData.map(el =>
+    let messagesElements = props.state.messagesData.map(el =>
         <Message message={el.message}/>)
 
-    let dialogsElements = props.dialogs.map(dialog =>
+    let dialogsElements = props.state.dialogs.map(dialog =>
         <DialogItem name={dialog.name} id={dialog.id}/>)
 
 

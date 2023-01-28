@@ -20,10 +20,9 @@ function App(props:MainPropsType) {
             <Navbar/>
             <div className="app-wrapper-content">
                 <Route exact path="/dialogs" render={()=><Dialogs
-                    dialogs={props.state.messagePage.dialogs}
-                    messagesData={props.state.messagePage.messagesData}/>}/>
+                    state={props.state.messagePage}/>}/>
                 <Route path="/profile" render={()=><Profile
-                    postData={props.state.profilePage.postData}/>}/>
+                    state={props.state.profilePage}/>}/>
             </div>
         </div>
         </BrowserRouter>);
