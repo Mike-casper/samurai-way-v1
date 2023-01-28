@@ -5,6 +5,6 @@ import App from './App';
 import {state} from "./redux/state"
 
 ReactDOM.render(
-    <App postData={state.postData} dialogs={state.dialogs} messagesData={state.messagesData} />,
+    <App state={state}/>,
   document.getElementById('root')
 );
