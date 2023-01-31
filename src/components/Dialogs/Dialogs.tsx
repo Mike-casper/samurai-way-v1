@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
+import {DialogItem, DialogsType} from "./DialogItem/DialogsItem";
+import {Message, MessageDataType} from "./Message/Message";
 
 type MainPropsType = {
     state:DialogsPropsType
@@ -8,30 +10,6 @@ type MainPropsType = {
 type DialogsPropsType= {
     dialogs:Array<DialogsType>
     messagesData:Array<MessageDataType>
-}
-type MessageDataType={
-    id?:number,
-    message:string
-}
-
-type DialogsType ={
-    id: number,
-    name:string
-}
-
-export const DialogItem = (props: DialogsType) => {
-    return (
-
-        <div className={s.dialog + " " + s.active}>
-            <NavLink to={"/dialogs/" + props.id}>{props.name}</NavLink>
-        </div>
-    )
-}
-
-export const Message = (props: MessageDataType) => {
-    return (
-        <div className={s.message}>{props.message}</div>
-    )
 }
 
 export const Dialogs = (props:MainPropsType) => {
@@ -43,6 +21,10 @@ export const Dialogs = (props:MainPropsType) => {
         <DialogItem name={dialog.name} id={dialog.id}/>)
 
 
+    const addMessage =() =>{
+        alert(PostElement.current?.value)
+    }
+    const PostElement = React.createRef<HTMLTextAreaElement>();
 
     return (
         <div className={s.dialogs}>
@@ -53,6 +35,16 @@ export const Dialogs = (props:MainPropsType) => {
                 <div className={s.dialog + " " + s.active}>
                     {/*<NavLink to="/dialogs/1">Dimych</NavLink>*/}
 
+                </div>
+                <div>
+                <textarea ref = {PostElement}>
+
+                </textarea>
+                    </div>
+                <div>
+                    <button onClick={addMessage}>
+                        Add message
+                    </button>
                 </div>
             </div>
             <div className={s.messages}>

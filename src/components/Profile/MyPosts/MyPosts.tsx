@@ -4,6 +4,7 @@ import {Post} from "./Post/Post";
 
 type MainPropsType= {
     postData:Array<MyPostsType>
+
 }
 
 type MyPostsType ={
@@ -24,6 +25,11 @@ export const MyPosts = (props:MainPropsType) => {
     let postsElements = props.postData.map(el=>
         <Post message={el.message} likeCounts={el.likeCount}/>)
 
+    const addPost =() =>{
+        alert(newPostElement.current?.value)
+    }
+    const newPostElement = React.createRef<HTMLTextAreaElement>();
+
     return (
         <div className={s.postsBlock}>
             <h3>
@@ -31,12 +37,11 @@ export const MyPosts = (props:MainPropsType) => {
             </h3>
             <div>
                 <div>
-                        <textarea>
-
+                        <textarea ref={newPostElement} >
                         </textarea>
                 </div>
                 <div>
-                    <button>
+                    <button onClick={addPost}>
                         Add post
                     </button>
                 </div>

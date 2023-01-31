@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 29 refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Jr6fLtcUZMxENiwWwHqYv0gFVF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,7 +81,8 @@
       <workItem from="1673871417983" duration="9656000" />
       <workItem from="1674124553283" duration="7608000" />
       <workItem from="1674212776506" duration="26906000" />
-      <workItem from="1674840996155" duration="12408000" />
+      <workItem from="1674840996155" duration="12441000" />
+      <workItem from="1675164418597" duration="8792000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -187,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674911720254</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Step 29 refactoring">
+      <created>1674973804081</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674973804081</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
