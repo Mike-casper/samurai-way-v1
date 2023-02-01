@@ -10,39 +10,39 @@ import React from "react";
 // }
 
 
-
-type MessageDataType={
-    id?:number,
-    message:string
+type MessageDataType = {
+    id?: number,
+    message: string
 }
-type DialogsType ={
+type DialogsType = {
     id: number,
-    name:string
+    name: string
 }
-type MyPostsType ={
+type MyPostsType = {
     id: number,
     message: string,
-    likeCount:number
+    likeCount: number
 }
 type ProfilePageType = {
-    postData:Array<MyPostsType>
+    postData: Array<MyPostsType>
 
 }
 
-type MessagePageType={
-    messagesData:Array<MessageDataType>
-    dialogs:Array<DialogsType>
+type MessagePageType = {
+    messagesData: Array<MessageDataType>
+    dialogs: Array<DialogsType>
 }
 type StatePropsType = {
-    profilePage:ProfilePageType
-    messagePage:MessagePageType
+    profilePage: ProfilePageType
+    messagePage: MessagePageType
 }
 export type MainPropsType = {
-    state:StatePropsType
+    state: StatePropsType
+    addPost:(PostMessage: string)=>void
 }
 
 export const state = {
-    profilePage:{
+    profilePage: {
         postData:
             [{id: 1, message: "How are you?", likeCount: 12},
                 {id: 2, message: "First post", likeCount: 21},
@@ -70,4 +70,14 @@ export const state = {
                 {id: 6, name: "Viktor"},
             ],
     }
+}
+
+export const addPost = (PostMessage: string) => {
+    debugger;
+    let newPost:MyPostsType = {
+        id: 5,
+        message: PostMessage,
+        likeCount: 22
+    };
+    state.profilePage.postData.push(newPost)
 }

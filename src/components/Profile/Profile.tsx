@@ -5,6 +5,7 @@ import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
 
 type MainPropsType = {
     state:PostPropsType
+    addPost:(message: string)=>void
 }
 type PostPropsType= {
     postData:Array<MyPostsType>
@@ -21,7 +22,7 @@ export const Profile = (props:MainPropsType) => {
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts postData={props.state.postData}  />
+            <MyPosts postData={props.state.postData} addPost={props.addPost}  />
         </div>
     )
 }

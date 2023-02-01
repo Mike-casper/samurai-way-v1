@@ -6,6 +6,7 @@ import {Message, MessageDataType} from "./Message/Message";
 
 type MainPropsType = {
     state:DialogsPropsType
+
 }
 type DialogsPropsType= {
     dialogs:Array<DialogsType>

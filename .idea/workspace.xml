@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 29 refactoring">
+    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 31 useRef vs useState">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1674124553283" duration="7608000" />
       <workItem from="1674212776506" duration="26906000" />
       <workItem from="1674840996155" duration="12441000" />
-      <workItem from="1675164418597" duration="8792000" />
+      <workItem from="1675164418597" duration="19913000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674973804081</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Step 31 useRef vs useState">
+      <created>1675194158997</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675194158997</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +241,7 @@
     <MESSAGE value="Step 28 dialogs into index + add types" />
     <MESSAGE value="Step 29 little refactoring" />
     <MESSAGE value="Step 29 refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 29 refactoring" />
+    <MESSAGE value="Step 31 useRef vs useState" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 31 useRef vs useState" />
   </component>
 </project>
