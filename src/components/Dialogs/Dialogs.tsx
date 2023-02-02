@@ -5,7 +5,7 @@ import {DialogItem, DialogsType} from "./DialogItem/DialogsItem";
 import {Message, MessageDataType} from "./Message/Message";
 
 type MainPropsType = {
-    state:DialogsPropsType
+    message:DialogsPropsType
 
 }
 type DialogsPropsType= {
@@ -15,10 +15,10 @@ type DialogsPropsType= {
 
 export const Dialogs = (props:MainPropsType) => {
 
-    let messagesElements = props.state.messagesData.map(el =>
+    let messagesElements = props.message.messagesData.map(el =>
         <Message message={el.message}/>)
 
-    let dialogsElements = props.state.dialogs.map(dialog =>
+    let dialogsElements = props.message.dialogs.map(dialog =>
         <DialogItem name={dialog.name} id={dialog.id}/>)
 
 

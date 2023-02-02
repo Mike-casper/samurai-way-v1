@@ -1,4 +1,5 @@
 import React from "react";
+import {rerender} from "../render";
 
 // export type StatePropsType = {
 //     state:ProfilePageType
@@ -32,16 +33,17 @@ type MessagePageType = {
     messagesData: Array<MessageDataType>
     dialogs: Array<DialogsType>
 }
-type StatePropsType = {
+export type StatePropsType = {
     profilePage: ProfilePageType
     messagePage: MessagePageType
+
 }
 export type MainPropsType = {
     state: StatePropsType
     addPost:(PostMessage: string)=>void
 }
 
-export const state = {
+export const state:StatePropsType = {
     profilePage: {
         postData:
             [{id: 1, message: "How are you?", likeCount: 12},
@@ -73,11 +75,13 @@ export const state = {
 }
 
 export const addPost = (PostMessage: string) => {
-    debugger;
-    let newPost:MyPostsType = {
+
+    const newPost:MyPostsType = {
         id: 5,
         message: PostMessage,
         likeCount: 22
     };
-    state.profilePage.postData.push(newPost)
+    state.profilePage.postData.push(newPost);
+
+    rerender(state);
 }

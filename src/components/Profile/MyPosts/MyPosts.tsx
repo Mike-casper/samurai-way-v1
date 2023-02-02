@@ -27,7 +27,7 @@ export const MyPosts = (props:MainPropsType) => {
 
     const addPost =() =>{
         debugger;
-        props.addPost(newPostElement.current ? newPostElement.current.value : "--------")
+        props.addPost(newPostElement.current ? newPostElement.current.value : "")
     }
     const newPostElement = React.createRef<HTMLTextAreaElement>();
 

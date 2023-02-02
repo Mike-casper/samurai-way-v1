@@ -16,7 +16,7 @@ function App(props:MainPropsType) {
             <Navbar/>
             <div className="app-wrapper-content">
                 <Route exact path="/dialogs" render={()=><Dialogs
-                    state={props.state.messagePage} />}/>
+                    message={props.state.messagePage} />}/>
 
                 <Route path="/profile" render={()=><Profile
                     state={props.state.profilePage} addPost={props.addPost} />}/>
