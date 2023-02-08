@@ -75,15 +75,16 @@ export const state:StatePropsType = {
 }
 
 export const addPost = (PostMessage: string) => {
-    debugger;
     let newPost:MyPostsType = {
         id: 5,
         message: PostMessage,
         likeCount: 22
     };
-    state.profilePage.postData.push(newPost)
+    state.profilePage.postData.push(newPost);
+    state.profilePage.messageForNewPost = " "
     rerender(state);
 }
+
 
 export const changeNewText = (newText:string)=>{
     state.profilePage.messageForNewPost = newText;

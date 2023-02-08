@@ -30,7 +30,6 @@ export const MyPosts = (props:MainPropsType) => {
 
     const addPost =() =>{
         props.addPost(props.newPostText)
-        props.changeNewTextCallback(" ")
     }
     const newTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
         props.changeNewTextCallback(e.currentTarget.value)
