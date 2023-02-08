@@ -1,10 +1,13 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import s from "./MyPosts.module.css";
 import {Post} from "./Post/Post";
 
 type MainPropsType= {
     postData:Array<MyPostsType>
     addPost:(message: string)=>void
+    newPostText:string
+    changeNewTextCallback:(newText:string)=>void
+
 }
 
 type MyPostsType ={
@@ -26,10 +29,12 @@ export const MyPosts = (props:MainPropsType) => {
         <Post message={el.message} likeCounts={el.likeCount}/>)
 
     const addPost =() =>{
-        debugger;
-        props.addPost(newPostElement.current ? newPostElement.current.value : "")
+        props.addPost(props.newPostText)
+        props.changeNewTextCallback(" ")
     }
-    const newPostElement = React.createRef<HTMLTextAreaElement>();
+    const newTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
+        props.changeNewTextCallback(e.currentTarget.value)
+    }
 
     return (
         <div className={s.postsBlock}>
@@ -38,8 +43,7 @@ export const MyPosts = (props:MainPropsType) => {
             </h3>
             <div>
                 <div>
-                        <textarea ref={newPostElement} >
-                        </textarea>
+                        <textarea value={props.newPostText} onChange={newTextChangeHandler} />
                 </div>
                 <div>
                     <button onClick={addPost}>

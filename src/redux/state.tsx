@@ -25,8 +25,8 @@ type MyPostsType = {
     likeCount: number
 }
 type ProfilePageType = {
+    messageForNewPost:string
     postData: Array<MyPostsType>
-
 }
 
 type MessagePageType = {
@@ -36,7 +36,6 @@ type MessagePageType = {
 export type StatePropsType = {
     profilePage: ProfilePageType
     messagePage: MessagePageType
-
 }
 export type MainPropsType = {
     state: StatePropsType
@@ -45,6 +44,7 @@ export type MainPropsType = {
 
 export const state:StatePropsType = {
     profilePage: {
+        messageForNewPost: "it-kamasutra.com",
         postData:
             [{id: 1, message: "How are you?", likeCount: 12},
                 {id: 2, message: "First post", likeCount: 21},
@@ -75,13 +75,17 @@ export const state:StatePropsType = {
 }
 
 export const addPost = (PostMessage: string) => {
-
-    const newPost:MyPostsType = {
+    debugger;
+    let newPost:MyPostsType = {
         id: 5,
         message: PostMessage,
         likeCount: 22
     };
-    state.profilePage.postData.push(newPost);
-
+    state.profilePage.postData.push(newPost)
     rerender(state);
+}
+
+export const changeNewText = (newText:string)=>{
+    state.profilePage.messageForNewPost = newText;
+    rerender(state)
 }

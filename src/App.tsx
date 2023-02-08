@@ -5,7 +5,7 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {MainPropsType} from "./redux/state";
+import {changeNewText, MainPropsType} from "./redux/state";
 
 
 function App(props:MainPropsType) {
@@ -16,10 +16,13 @@ function App(props:MainPropsType) {
             <Navbar/>
             <div className="app-wrapper-content">
                 <Route exact path="/dialogs" render={()=><Dialogs
-                    message={props.state.messagePage} />}/>
+                    message={props.state.messagePage}/>}/>
 
                 <Route path="/profile" render={()=><Profile
-                    state={props.state.profilePage} addPost={props.addPost} />}/>
+                    profilePage={props.state.profilePage}
+                    newPostText={props.state.profilePage.messageForNewPost}
+                    addPost={props.addPost}
+                    changeNewTextCallback={changeNewText}/>}/>
             </div>
         </div>);
 }
