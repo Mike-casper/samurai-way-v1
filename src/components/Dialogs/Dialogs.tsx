@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogItem, DialogsType} from "./DialogItem/DialogsItem";
@@ -6,8 +6,9 @@ import {Message, MessageDataType} from "./Message/Message";
 
 type MainPropsType = {
     message:DialogsPropsType
-
-
+    changeNewDataTextCB:(text:string)=>void
+    addMessage:(CurrentMessage:string)=>void
+    newPostDataText:string
 }
 type DialogsPropsType= {
     dialogs:Array<DialogsType>
@@ -23,10 +24,12 @@ export const Dialogs = (props:MainPropsType) => {
         <DialogItem name={dialog.name} id={dialog.id}/>)
 
 
-    const addMessage =() =>{
-        alert(PostElement.current?.value)
+    const newDataTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
+        props.changeNewDataTextCB(e.currentTarget.value)
     }
-    const PostElement = React.createRef<HTMLTextAreaElement>();
+    const addMessage=()=>{
+        props.addMessage(props.newPostDataText)
+    }
 
     return (
         <div className={s.dialogs}>
@@ -39,9 +42,7 @@ export const Dialogs = (props:MainPropsType) => {
 
                 </div>
                 <div>
-                <textarea ref = {PostElement}>
-
-                </textarea>
+                <textarea value={props.newPostDataText} onChange={newDataTextChangeHandler}/>
                     </div>
                 <div>
                     <button onClick={addMessage}>

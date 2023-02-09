@@ -1,5 +1,5 @@
 import React from "react";
-import {rerender} from "../render";
+// import {rerender} from "../render"; якобы удалили этот файл в 35 уроке
 
 // export type StatePropsType = {
 //     state:ProfilePageType
@@ -25,13 +25,14 @@ type MyPostsType = {
     likeCount: number
 }
 type ProfilePageType = {
-    messageForNewPost:string
+    messageForNewPost: string
     postData: Array<MyPostsType>
 }
 
 type MessagePageType = {
     messagesData: Array<MessageDataType>
     dialogs: Array<DialogsType>
+    messageForNewData: string
 }
 export type StatePropsType = {
     profilePage: ProfilePageType
@@ -39,10 +40,11 @@ export type StatePropsType = {
 }
 export type MainPropsType = {
     state: StatePropsType
-    addPost:(PostMessage: string)=>void
+    addPost: (PostMessage: string) => void
+    addMessage: (CurrentMessage: string) => void
 }
 
-export const state:StatePropsType = {
+export const state: StatePropsType = {
     profilePage: {
         messageForNewPost: "it-kamasutra.com",
         postData:
@@ -53,6 +55,7 @@ export const state:StatePropsType = {
             ],
     },
     messagePage: {
+        messageForNewData: "www",
         messagesData:
             [
                 {id: 1, message: "How's you name"},
@@ -75,18 +78,36 @@ export const state:StatePropsType = {
 }
 
 export const addPost = (PostMessage: string) => {
-    let newPost:MyPostsType = {
+    let newPost: MyPostsType = {
         id: 5,
         message: PostMessage,
         likeCount: 22
     };
+
     state.profilePage.postData.push(newPost);
     state.profilePage.messageForNewPost = " "
-    rerender(state);
+    rerender();
 }
-
-
-export const changeNewText = (newText:string)=>{
+export const addMessage = (CurrentMessage: string) => {
+    let newMessage: MessageDataType = {
+        id: 1,
+        message: CurrentMessage
+    };
+    state.messagePage.messagesData.push(newMessage);
+    state.messagePage.messageForNewData = " "
+    rerender()
+}
+export const changeNewText = (newText: string) => {
     state.profilePage.messageForNewPost = newText;
-    rerender(state)
+    rerender()
+}
+export const changeNewDataText = (text: string) => {
+    state.messagePage.messageForNewData = text;
+    rerender()
+}
+export const subscribe = (observer: ()=>void) => {
+    rerender = observer;
+}
+let rerender = () => {
+    console.log(" state is changed")
 }
