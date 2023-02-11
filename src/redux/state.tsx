@@ -37,6 +37,8 @@ type MessagePageType = {
 export type StatePropsType = {
     profilePage: ProfilePageType
     messagePage: MessagePageType
+
+
 }
 export type MainPropsType = {
     state: StatePropsType
@@ -105,9 +107,11 @@ export const changeNewDataText = (text: string) => {
     state.messagePage.messageForNewData = text;
     rerender()
 }
+
 export const subscribe = (observer: ()=>void) => {
     rerender = observer;
 }
+
 let rerender = () => {
     console.log(" state is changed")
 }
