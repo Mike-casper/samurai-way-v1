@@ -45,7 +45,7 @@ export const Dialogs = (props:MainPropsType) => {
                 <textarea value={props.newPostDataText} onChange={newDataTextChangeHandler}/>
                     </div>
                 <div>
-                    <button onClick={addMessage}>
+                    <button onClick={ addMessage}>
                         Add message
                     </button>
                 </div>

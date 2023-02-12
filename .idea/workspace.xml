@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 35 use Callback function">
+    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 37 use OOP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/render.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1675164418597" duration="20050000" />
       <workItem from="1675326343793" duration="16512000" />
       <workItem from="1675594902747" duration="1256000" />
-      <workItem from="1675859661390" duration="24758000" />
+      <workItem from="1675859661390" duration="33669000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -245,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675967278015</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Step 35 use Callback function">
+      <created>1676127151878</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676127151878</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +288,7 @@
     <MESSAGE value="Step 33 can add post on our profile" />
     <MESSAGE value="Step 34 can add/save text in our input" />
     <MESSAGE value="Step 35 use Callback function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 35 use Callback function" />
+    <MESSAGE value="Step 37 use OOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 37 use OOP" />
   </component>
 </project>

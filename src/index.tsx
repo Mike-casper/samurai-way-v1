@@ -2,22 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {addMessage, state, StatePropsType, subscribe} from "./redux/state";
-import {addPost} from "./redux/state";
+import {store} from "./redux/state"
 import {BrowserRouter} from "react-router-dom";
 
 // addPost("sssssцццццц2222"); часа времени стоил вызов этой функции, потому что она вызывала ререндер
 // и происходило замыкание
+// export const rerender = (state:StatePropsType) =>!1!
 
-const rerender = () =>
+export const rerender = () =>
+
 {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state} addPost={addPost} addMessage={addMessage}/>,
+            <App state={store.getState()} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)}/>,
         </BrowserRouter>, document.getElementById('root')
     );
 }
+rerender()
+store.subscribe(rerender);
 
-rerender();
-
-subscribe(rerender);
+// rerender(state);
+//!1!
+// subscribe(rerender);
