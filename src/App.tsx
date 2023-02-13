@@ -5,7 +5,7 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {changeNewDataText, changeNewText, MainPropsType} from "./redux/state";
+import {MainPropsType} from "./redux/state";
 
 
 function App(props:MainPropsType) {
@@ -19,13 +19,13 @@ function App(props:MainPropsType) {
                     message={props.state.messagePage}
                     newPostDataText={props.state.messagePage.messageForNewData}
                     addMessage={props.addMessage}
-                    changeNewDataTextCB={changeNewDataText}/>}/>
+                    changeNewDataTextCB={props.changeNewDataText}/>}/>
 
                 <Route path="/profile" render={()=><Profile
                     profilePage={props.state.profilePage}
                     newPostText={props.state.profilePage.messageForNewPost}
                     addPost={props.addPost}
-                    changeNewTextCallback={changeNewText}/>}/>
+                    changeNewTextCallback={props.changeNewText}/>}/>
             </div>
         </div>);
 }

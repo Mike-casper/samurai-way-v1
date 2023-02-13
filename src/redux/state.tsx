@@ -45,6 +45,8 @@ export type MainPropsType = {
     state: StatePropsType
     addPost: (PostMessage: string) => void
     addMessage: (CurrentMessage: string) => void
+    changeNewText:(newText: string) => void
+    changeNewDataText:(text: string) => void
 }
 export type StoreType = {
     _state: StatePropsType,
@@ -53,6 +55,9 @@ export type StoreType = {
     addMessage: (CurrentMessage: string) => void,
     subscribe:(observer:()=>void) => void,
     getState:()=>StatePropsType
+    changeNewText:(newText: string) => void
+    changeNewDataText:(text: string) => void
+    dispatch:()=> void
 
 }
 export let store: StoreType = {
@@ -88,6 +93,17 @@ export let store: StoreType = {
                 ],
         }
     },
+    _callSubscriber() {
+        console.log(" state is changed")
+    },
+
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
+    getState() {
+        return this._state
+    },
+
     addPost(PostMessage: string) {
         let newPost: MyPostsType = {
             id: 5,
@@ -107,25 +123,28 @@ export let store: StoreType = {
         this._state.messagePage.messageForNewData = " "
         this._callSubscriber()
     },
-    subscribe(observer) {
-        this._callSubscriber = observer;
+    changeNewText(newText: string){
+        this._state.profilePage.messageForNewPost = newText;
+        this._callSubscriber()
     },
-    _callSubscriber() {
-        console.log(" state is changed")
+    changeNewDataText(text: string){
+        store._state.messagePage.messageForNewData = text;
+        store._callSubscriber()
     },
-    getState() {
-        return this._state
+    dispatch(){
+
     }
 }
 
-   export const changeNewText=(newText: string)=> {
-        store._state.profilePage.messageForNewPost = newText;
-        store._callSubscriber()
-    }
-    export const changeNewDataText=(text: string)=> {
-        store._state.messagePage.messageForNewData = text;
-        store._callSubscriber()
-    }
+   // export const changeNewText=(newText: string)=> {
+   //      store._state.profilePage.messageForNewPost = newText;
+   //      store._callSubscriber()
+   //  }
+
+    // export const changeNewDataText=(text: string)=> {
+    //     store._state.messagePage.messageForNewData = text;
+    //     store._callSubscriber()
+    // }
 
 // export const state: StatePropsType = {
 //     profilePage: {
