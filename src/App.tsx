@@ -28,6 +28,7 @@ function App(props:PropsType) {
                 <Route path="/profile" render={()=><Profile
                     profilePage={props.store._state.profilePage}
                     newPostText={props.store._state.profilePage.messageForNewPost}
+                    dispatch={props.store.dispatch.bind(props.store)}
                     addPost={props.store.addPost}
                     changeNewTextCallback={props.store.changeNewText.bind(props.store)}/>}/>
             </div>
