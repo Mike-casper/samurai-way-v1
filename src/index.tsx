@@ -14,8 +14,7 @@ export const rerender = () =>
 {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={store.getState()} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)}
-            changeNewText={store.changeNewText.bind(store)} changeNewDataText={store.changeNewDataText.bind(store)}/>,
+            <App store={store}/>,
         </BrowserRouter>, document.getElementById('root')
     );
 }

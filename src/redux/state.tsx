@@ -48,6 +48,7 @@ export type MainPropsType = {
     changeNewText:(newText: string) => void
     changeNewDataText:(text: string) => void
 }
+
 export type StoreType = {
     _state: StatePropsType,
     _callSubscriber: () => void,
@@ -57,7 +58,7 @@ export type StoreType = {
     getState:()=>StatePropsType
     changeNewText:(newText: string) => void
     changeNewDataText:(text: string) => void
-    dispatch:()=> void
+    // dispatch:(action:()=>void)=> void
 
 }
 export let store: StoreType = {
@@ -131,16 +132,29 @@ export let store: StoreType = {
         store._state.messagePage.messageForNewData = text;
         store._callSubscriber()
     },
-    dispatch(){
 
-    }
+
+    // dispatch(action){
+    //     if(action.type === "ADD_POST"){
+    //         let newPost: MyPostsType = {
+    //             id: 5,
+    //             message: this._state.profilePage.messageForNewPost,
+    //             likeCount: 22
+    //         };
+    //         this._state.profilePage.postData.push(newPost);
+    //         this._state.profilePage.messageForNewPost = " "
+    //         this._callSubscriber();
+    //     } else if(action.type === "UPDATE-NEW-POST-TEXT"){
+    //         this._state.profilePage.messageForNewPost = action.newText;
+    //         this._callSubscriber()
+    //     }
+    // }
 }
 
    // export const changeNewText=(newText: string)=> {
    //      store._state.profilePage.messageForNewPost = newText;
    //      store._callSubscriber()
    //  }
-
     // export const changeNewDataText=(text: string)=> {
     //     store._state.messagePage.messageForNewData = text;
     //     store._callSubscriber()
