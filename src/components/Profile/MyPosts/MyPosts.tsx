@@ -5,7 +5,7 @@ import {ActionsTypes} from "../../../redux/state";
 
 type MainPropsType= {
     postData:Array<MyPostsType>
-    addPost:(message: string)=>void
+    // addPost:(message: string)=>void
     newPostText:string
     changeNewTextCallback:(newText:string)=>void
     dispatch:(action:ActionsTypes)=>void

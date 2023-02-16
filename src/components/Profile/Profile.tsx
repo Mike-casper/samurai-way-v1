@@ -29,7 +29,7 @@ export const Profile = (props:MainPropsType) => {
             <ProfileInfo/>
             <MyPosts postData={props.profilePage.postData}
                      newPostText={props.newPostText}
-                     addPost={props.addPost}
+                     // addPost={props.addPost}
                      changeNewTextCallback={props.changeNewTextCallback}
                      dispatch={props.dispatch}
             />
