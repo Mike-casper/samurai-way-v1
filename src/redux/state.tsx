@@ -52,13 +52,13 @@ export type MainPropsType = {
 export type StoreType = {
     _state: StatePropsType,
     _callSubscriber: () => void,
-    addPost: (PostMessage: string) => void,
     addMessage: (CurrentMessage: string) => void,
     subscribe: (observer: () => void) => void,
     getState: () => StatePropsType
-    changeNewText: (newText: string) => void
     changeNewDataText: (text: string) => void
     dispatch: (action: ActionsTypes) => void
+    // _addPost: (PostMessage: string) => void
+    // changeNewText: (newText: string) => void
 
 }
 type addPostActionType = {
@@ -115,16 +115,6 @@ export let store: StoreType = {
         return this._state
     },
 
-    addPost(PostMessage: string) {
-        let newPost: MyPostsType = {
-            id: 5,
-            message: PostMessage,
-            likeCount: 22
-        };
-        this._state.profilePage.postData.push(newPost);
-        this._state.profilePage.messageForNewPost = " "
-        this._callSubscriber();
-    },
     addMessage(CurrentMessage: string) {
         let newMessage: MessageDataType = {
             id: 1,
@@ -134,15 +124,24 @@ export let store: StoreType = {
         this._state.messagePage.messageForNewData = " "
         this._callSubscriber()
     },
-    changeNewText(newText: string) {
-        this._state.profilePage.messageForNewPost = newText;
-        this._callSubscriber()
-    },
     changeNewDataText(text: string) {
         store._state.messagePage.messageForNewData = text;
         store._callSubscriber()
     },
-
+    // changeNewText(newText: string) {
+    //     this._state.profilePage.messageForNewPost = newText;
+    //     this._callSubscriber()
+    // },
+    // _addPost(PostMessage: string) {
+    //     let newPost: MyPostsType = {
+    //         id: 5,
+    //         message: PostMessage,
+    //         likeCount: 22
+    //     };
+    //     this._state.profilePage.postData.push(newPost);
+    //     this._state.profilePage.messageForNewPost = " "
+    //     this._callSubscriber();
+    // },
     dispatch(action) {
         if (action.type === "ADD-POST") {
             let newPost: MyPostsType = {
