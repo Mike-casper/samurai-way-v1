@@ -36,7 +36,8 @@ export const MyPosts = (props:MainPropsType) => {
     }
 
     const newTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
-        props.changeNewTextCallback(e.currentTarget.value)
+        props.dispatch({type:"UPDATE-NEW-POST-TEXT", newText:e.currentTarget.value})
+        // props.changeNewTextCallback(e.currentTarget.value)
     }
 
     return (
