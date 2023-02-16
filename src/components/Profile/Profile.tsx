@@ -7,10 +7,10 @@ import {ActionsTypes} from "../../redux/state";
 
 type MainPropsType = {
    profilePage:PostPropsType
-    // addPost:(message: string)=>void
     newPostText:string
-    changeNewTextCallback:(newText:string)=>void
     dispatch:(action:ActionsTypes)=>void
+    // addPost:(message: string)=>void
+    // changeNewTextCallback:(newText:string)=>void
 }
 type PostPropsType= {
     postData:Array<MyPostsType>
@@ -30,7 +30,7 @@ export const Profile = (props:MainPropsType) => {
             <MyPosts postData={props.profilePage.postData}
                      newPostText={props.newPostText}
                      // addPost={props.addPost}
-                     changeNewTextCallback={props.changeNewTextCallback}
+                     // changeNewTextCallback={props.changeNewTextCallback}
                      dispatch={props.dispatch}
             />
         </div>

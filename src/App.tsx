@@ -30,7 +30,8 @@ function App(props:PropsType) {
                     newPostText={props.store._state.profilePage.messageForNewPost}
                     dispatch={props.store.dispatch.bind(props.store)}
                     // addPost={props.store.addPost}
-                    changeNewTextCallback={props.store.changeNewText.bind(props.store)}/>}/>
+                    // changeNewTextCallback={props.store.changeNewText.bind(props.store)}
+                />}/>
             </div>
         </div>);
 }
