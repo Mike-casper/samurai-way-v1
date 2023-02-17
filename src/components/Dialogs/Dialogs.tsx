@@ -3,12 +3,14 @@ import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogItem, DialogsType} from "./DialogItem/DialogsItem";
 import {Message, MessageDataType} from "./Message/Message";
+import {ActionsTypes} from "../../redux/state";
 
 type MainPropsType = {
     message:DialogsPropsType
-    changeNewDataTextCB:(text:string)=>void
-    addMessage:(CurrentMessage:string)=>void
     newPostDataText:string
+    dispatch:(action:ActionsTypes)=>void
+    // addMessage:(CurrentMessage:string)=>void
+    // changeNewDataTextCB:(text:string)=>void
 }
 type DialogsPropsType= {
     dialogs:Array<DialogsType>
@@ -25,10 +27,12 @@ export const Dialogs = (props:MainPropsType) => {
 
 
     const newDataTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
-        props.changeNewDataTextCB(e.currentTarget.value)
+        props.dispatch({type:"CHANGE-NEW-DATA-TEXT", text:e.currentTarget.value})
+        // props.changeNewDataTextCB(e.currentTarget.value)
     }
     const addMessage=()=>{
-        props.addMessage(props.newPostDataText)
+        props.dispatch({type:"ADD-MESSAGE", CurrentMessage:props.newPostDataText})
+        // props.addMessage(props.newPostDataText)
     }
 
     return (

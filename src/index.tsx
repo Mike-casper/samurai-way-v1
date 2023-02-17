@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 import {store} from "./redux/state"
 import {BrowserRouter} from "react-router-dom";
 
@@ -9,13 +9,11 @@ import {BrowserRouter} from "react-router-dom";
 // и происходило замыкание
 // export const rerender = (state:StatePropsType) =>!1!
 
-export const rerender = () =>
-
-{
+export const rerender = () => {
     ReactDOM.render(
         <BrowserRouter>
             <App store={store}/>,
-        </BrowserRouter>, document.getElementById('root')
+        </BrowserRouter>, document.getElementById("root")
     );
 }
 rerender()
