@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreater to MyPosts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +39,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IT/samurai-way-v1/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IT/kamasutra/ekzamen&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -82,7 +83,10 @@
       <workItem from="1675594902747" duration="1256000" />
       <workItem from="1675859661390" duration="39595000" />
       <workItem from="1676556289410" duration="5742000" />
-      <workItem from="1676572254496" duration="11272000" />
+      <workItem from="1676572254496" duration="11938000" />
+      <workItem from="1676655993755" duration="42000" />
+      <workItem from="1676883932592" duration="2106000" />
+      <workItem from="1676887145925" duration="4925000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -308,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676637052324</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Step 39 add ActionCreater to MyPosts">
+      <created>1676640609158</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1676640609158</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

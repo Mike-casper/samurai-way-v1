@@ -64,19 +64,19 @@ export type StoreType = {
 //     type: "ADD-POST"
 //     PostMessage: string
 // }
+// type addMessageActionType = {
+//     type: "ADD-MESSAGE"
+//     CurrentMessage: string
+// }
 type addPostActionType = ReturnType<typeof addPostAC>
 type updateNewPostText = ReturnType<typeof updateNewPostTextAC>
+type  addMessageActionType = ReturnType<typeof addMessageAC>
+type changeNewDataTextActionType = ReturnType<typeof changeNewDataTextAC>
 
-type addMessageActionType = {
-    type: "ADD-MESSAGE"
-    CurrentMessage: string
-}
-type changeNewDataTextType = {
-    type: "CHANGE-NEW-DATA-TEXT"
-    text: string
-}
 
-export type ActionsTypes = addPostActionType | updateNewPostText | addMessageActionType | changeNewDataTextType
+
+
+export type ActionsTypes = addPostActionType | updateNewPostText | addMessageActionType | changeNewDataTextActionType
 
 const ADD_POST = "ADD-POST";
 
@@ -165,7 +165,7 @@ export let store: StoreType = {
 
         }
         if (action.type === "UPDATE-NEW-POST-TEXT") {
-            this._state.profilePage.messageForNewPost = action.newText;
+            this._state.profilePage.messageForNewPost = action.newTextPost;
             this._callSubscriber()
         }
         if (action.type === "ADD-MESSAGE") {
@@ -178,7 +178,7 @@ export let store: StoreType = {
             this._callSubscriber()
         }
         else if (action.type === "CHANGE-NEW-DATA-TEXT") {
-            store._state.messagePage.messageForNewData = action.text;
+            store._state.messagePage.messageForNewData = action.newTextMessage;
             store._callSubscriber()
         }
     }
@@ -192,8 +192,20 @@ export const addPostAC = (newPostText: string)=> {
 export const updateNewPostTextAC = (text: string) => {
     return {
         type: "UPDATE-NEW-POST-TEXT",
-        newText: text
+        newTextPost: text
     } as const
+}
+export const addMessageAC = (newPostDataText:string) =>{
+    return{
+        type:"ADD-MESSAGE",
+        CurrentMessage:newPostDataText
+    }as const
+}
+export const changeNewDataTextAC = (text:string) =>{
+    return{
+        type:"CHANGE-NEW-DATA-TEXT",
+        newTextMessage:text
+    }as const
 }
 
 // export const changeNewText=(newText: string)=> {
