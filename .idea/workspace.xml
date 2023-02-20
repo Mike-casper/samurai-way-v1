@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreater to MyPosts">
+    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreater to Dialogs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
       <workItem from="1676572254496" duration="11938000" />
       <workItem from="1676655993755" duration="42000" />
       <workItem from="1676883932592" duration="2106000" />
-      <workItem from="1676887145925" duration="4925000" />
+      <workItem from="1676887145925" duration="7355000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -319,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676640609158</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Step 39 add ActionCreater to Dialogs">
+      <created>1676894623383</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1676894623383</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +365,7 @@
     <MESSAGE value="Step 37-38 update Types" />
     <MESSAGE value="Step 38 can dispatch &quot;addPost&quot;" />
     <MESSAGE value="Step 39 add ActionCreater to MyPosts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 39 add ActionCreater to MyPosts" />
+    <MESSAGE value="Step 39 add ActionCreater to Dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 39 add ActionCreater to Dialogs" />
   </component>
 </project>

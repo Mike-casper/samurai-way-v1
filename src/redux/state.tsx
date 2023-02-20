@@ -70,13 +70,12 @@ export type StoreType = {
 // }
 type addPostActionType = ReturnType<typeof addPostAC>
 type updateNewPostText = ReturnType<typeof updateNewPostTextAC>
+
 type  addMessageActionType = ReturnType<typeof addMessageAC>
-type changeNewDataTextActionType = ReturnType<typeof changeNewDataTextAC>
+type updateNewDataDialogsActionType = ReturnType<typeof updateNewDataDialogsTextAC>
 
 
-
-
-export type ActionsTypes = addPostActionType | updateNewPostText | addMessageActionType | changeNewDataTextActionType
+export type ActionsTypes = addPostActionType | updateNewPostText | addMessageActionType | updateNewDataDialogsActionType
 
 const ADD_POST = "ADD-POST";
 
@@ -164,11 +163,11 @@ export let store: StoreType = {
             this._callSubscriber();
 
         }
-        if (action.type === "UPDATE-NEW-POST-TEXT") {
+        else if (action.type === "UPDATE-NEW-POST-TEXT") {
             this._state.profilePage.messageForNewPost = action.newTextPost;
             this._callSubscriber()
         }
-        if (action.type === "ADD-MESSAGE") {
+        else if (action.type === "ADD-MESSAGE") {
             let newMessage: MessageDataType = {
                 id: 1,
                 message: action.CurrentMessage
@@ -176,14 +175,13 @@ export let store: StoreType = {
             this._state.messagePage.messagesData.push(newMessage);
             this._state.messagePage.messageForNewData = " "
             this._callSubscriber()
-        }
-        else if (action.type === "CHANGE-NEW-DATA-TEXT") {
+        } else if (action.type === "CHANGE-NEW-DATA-TEXT") {
             store._state.messagePage.messageForNewData = action.newTextMessage;
             store._callSubscriber()
         }
     }
 }
-export const addPostAC = (newPostText: string)=> {
+export const addPostAC = (newPostText: string) => {
     return {
         type: ADD_POST,
         PostMessage: newPostText
@@ -195,17 +193,17 @@ export const updateNewPostTextAC = (text: string) => {
         newTextPost: text
     } as const
 }
-export const addMessageAC = (newPostDataText:string) =>{
-    return{
-        type:"ADD-MESSAGE",
-        CurrentMessage:newPostDataText
-    }as const
+export const addMessageAC = (newPostDataText: string) => {
+    return {
+        type: "ADD-MESSAGE",
+        CurrentMessage: newPostDataText
+    } as const
 }
-export const changeNewDataTextAC = (text:string) =>{
-    return{
-        type:"CHANGE-NEW-DATA-TEXT",
-        newTextMessage:text
-    }as const
+export const updateNewDataDialogsTextAC = (text: string) => {
+    return {
+        type: "CHANGE-NEW-DATA-TEXT",
+        newTextMessage: text
+    } as const
 }
 
 // export const changeNewText=(newText: string)=> {
