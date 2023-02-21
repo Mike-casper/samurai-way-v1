@@ -2,15 +2,14 @@ import React, {ChangeEvent} from "react";
 import s from "./MyPosts.module.css";
 import {Post} from "./Post/Post";
 import {
-    ActionsTypes,
-    addPostAC,
+    addPostAC, profilePageReducerType,
     updateNewPostTextAC
-} from "../../../redux/state";
+} from "../../../redux/profilePageReducer";
 
 type MainPropsType = {
     postData: Array<MyPostsType>
     newPostText: string
-    dispatch: (action: ActionsTypes) => void
+    dispatch: (action: profilePageReducerType) => void
     // changeNewTextCallback:(newText:string)=>void
     // addPost:(message: string)=>void
 

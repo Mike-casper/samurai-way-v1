@@ -3,21 +3,21 @@ import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogItem, DialogsType} from "./DialogItem/DialogsItem";
 import {Message, MessageDataType} from "./Message/Message";
-import {ActionsTypes, addMessageAC, updateNewDataDialogsTextAC} from "../../redux/state";
+import {dialogReducerType, addMessageAC, updateNewDataDialogsTextAC} from "../../redux/dialogReducer";
 
 type MainPropsType = {
-    message:DialogsPropsType
-    newPostDataText:string
-    dispatch:(action:ActionsTypes)=>void
+    message: DialogsPropsType
+    newPostDataText: string
+    dispatch: (action: dialogReducerType) => void
     // addMessage:(CurrentMessage:string)=>void
     // changeNewDataTextCB:(text:string)=>void
 }
-type DialogsPropsType= {
-    dialogs:Array<DialogsType>
-    messagesData:Array<MessageDataType>
+type DialogsPropsType = {
+    dialogs: Array<DialogsType>
+    messagesData: Array<MessageDataType>
 }
 
-export const Dialogs = (props:MainPropsType) => {
+export const Dialogs = (props: MainPropsType) => {
 
     let messagesElements = props.message.messagesData.map(el =>
         <Message message={el.message}/>)
@@ -26,11 +26,11 @@ export const Dialogs = (props:MainPropsType) => {
         <DialogItem name={dialog.name} id={dialog.id}/>)
 
 
-    const newDataTextChangeHandler = (e:ChangeEvent<HTMLTextAreaElement>) =>{
+    const newDataTextChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
         props.dispatch(updateNewDataDialogsTextAC(e.currentTarget.value))
         // props.changeNewDataTextCB(e.currentTarget.value)
     }
-    const addMessage=()=>{
+    const addMessage = () => {
         props.dispatch(addMessageAC(props.newPostDataText))
         // props.addMessage(props.newPostDataText)
     }
@@ -46,10 +46,11 @@ export const Dialogs = (props:MainPropsType) => {
 
                 </div>
                 <div>
-                <textarea value={props.newPostDataText} onChange={newDataTextChangeHandler}/>
-                    </div>
+                    <textarea value={props.newPostDataText} onChange={newDataTextChangeHandler}
+                    placeholder="Enter your message"/>
+                </div>
                 <div>
-                    <button onClick={ addMessage}>
+                    <button onClick={addMessage}>
                         Add message
                     </button>
                 </div>

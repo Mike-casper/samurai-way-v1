@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreater to Dialogs">
+    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreator to Dialogs">
+      <change afterPath="$PROJECT_DIR$/src/redux/dialogReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/profilePageReducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +20,7 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -38,7 +44,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IT/kamasutra/ekzamen&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IT/samurai-way-v1/src/redux&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -49,11 +55,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\samurai-way-v1\src\redux" />
       <recent name="D:\IT\samurai-way-v1\src" />
       <recent name="D:\IT\samurai-way-v1\src\components\Dialogs\DialogItem" />
       <recent name="D:\IT\samurai-way-v1\src\components\Dialogs\Message" />
       <recent name="D:\IT\samurai-way-v1\src\components\Profile\ProfileInfo" />
-      <recent name="D:\IT\samurai-way-v1\src\components\Profile\MyPosts\Post" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\samurai-way-v1\src\components\Profile" />
@@ -85,7 +91,8 @@
       <workItem from="1676572254496" duration="11938000" />
       <workItem from="1676655993755" duration="42000" />
       <workItem from="1676883932592" duration="2106000" />
-      <workItem from="1676887145925" duration="7355000" />
+      <workItem from="1676887145925" duration="11830000" />
+      <workItem from="1676964424003" duration="1554000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -325,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676894623383</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Step 39 add ActionCreator to Dialogs">
+      <created>1676901065000</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1676901065000</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +380,7 @@
     <MESSAGE value="Step 38 can dispatch &quot;addPost&quot;" />
     <MESSAGE value="Step 39 add ActionCreater to MyPosts" />
     <MESSAGE value="Step 39 add ActionCreater to Dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 39 add ActionCreater to Dialogs" />
+    <MESSAGE value="Step 39 add ActionCreator to Dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 39 add ActionCreator to Dialogs" />
   </component>
 </project>
