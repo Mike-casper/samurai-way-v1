@@ -5,13 +5,14 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {MainPropsType, store, StoreType} from "./redux/state";
+import {MainPropsType, store, StoreType} from "./redux/store";
 
 type PropsType = {
     store: StoreType
 }
 
 function App(props: PropsType) {
+    debugger
     const state = props.store.getState();
 
     return (

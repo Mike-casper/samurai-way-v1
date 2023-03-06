@@ -1,12 +1,34 @@
 import React from "react";
-import {MessagePageType} from "./state";
+import {MessagePageType} from "./store";
 import {MessageDataType} from "../components/Dialogs/Message/Message";
 
 type  addMessageActionType = ReturnType<typeof addMessageAC>
 type updateNewDataDialogsActionType = ReturnType<typeof updateNewDataDialogsTextAC>
 export type dialogReducerType = addMessageActionType | updateNewDataDialogsActionType
 
-export const dialogReducer = (state: MessagePageType, action: any) => {
+let initialState ={
+    messageForNewData: "www",
+    messagesData:
+        [
+            {id: 1, message: "How's you name"},
+            {id: 2, message: "SSS"},
+            {id: 3, message: "Yo"},
+            {id: 4, message: "Whta's your country"},
+            {id: 5, message: "WWW"},
+            {id: 6, message: "Viktor"},
+        ],
+    dialogs:
+        [
+            {id: 1, name: "Dimych"},
+            {id: 2, name: "Andrew"},
+            {id: 3, name: "Lola"},
+            {id: 4, name: "Valera"},
+            {id: 5, name: "Sveta"},
+            {id: 6, name: "Viktor"},
+        ],
+}
+
+export const dialogReducer = (state: MessagePageType = initialState, action: any) => {
     switch (action.type) {
         case "ADD-MESSAGE":
 

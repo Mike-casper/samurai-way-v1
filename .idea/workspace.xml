@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 39 add ActionCreator to Dialogs">
-      <change afterPath="$PROJECT_DIR$/src/redux/dialogReducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/profilePageReducer.tsx" afterDir="false" />
+    <list default="true" id="876b80de-6636-4e0b-98ab-49761c60fbbd" name="Changes" comment="Step 41 add reducer to dialog and profile">
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profilePageReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profilePageReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -92,7 +92,12 @@
       <workItem from="1676655993755" duration="42000" />
       <workItem from="1676883932592" duration="2106000" />
       <workItem from="1676887145925" duration="11830000" />
-      <workItem from="1676964424003" duration="1554000" />
+      <workItem from="1676964424003" duration="2081000" />
+      <workItem from="1677002978420" duration="2652000" />
+      <workItem from="1677322400843" duration="349000" />
+      <workItem from="1677842294655" duration="560000" />
+      <workItem from="1677858716549" duration="226000" />
+      <workItem from="1678118802391" duration="6529000" />
     </task>
     <task id="LOCAL-00001" summary="Inital commit">
       <created>1672827839569</created>
@@ -339,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676901065000</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Step 41 add reducer to dialog and profile">
+      <created>1676966247236</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1676966247236</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +393,7 @@
     <MESSAGE value="Step 39 add ActionCreater to MyPosts" />
     <MESSAGE value="Step 39 add ActionCreater to Dialogs" />
     <MESSAGE value="Step 39 add ActionCreator to Dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 39 add ActionCreator to Dialogs" />
+    <MESSAGE value="Step 41 add reducer to dialog and profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 41 add reducer to dialog and profile" />
   </component>
 </project>
